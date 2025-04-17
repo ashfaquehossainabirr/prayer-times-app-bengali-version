@@ -103,7 +103,7 @@ const App = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-4 bg-gray-100 rounded shadow">
+    <div className="max-w-md mx-auto mt-10 p-4 bg-gray-100 shadow">
       <BengaliClock />
       <PrayerTimesBN prayerTimes={prayerTimes} currentPrayer={currentPrayer} />
       {nextPrayer && (
