@@ -35,7 +35,8 @@ const BengaliClock = () => {
   }, []);
 
   return (
-    <div style={{ fontSize: '2rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '1rem' }}>
+    <div className='bangla-clock' 
+    style={{ fontSize: '1.8rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '1rem' }}>
       🕒 এখন সময়: {currentTime}
     </div>
   );
