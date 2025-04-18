@@ -96,8 +96,8 @@ const App = () => {
 
   const handleCountdownEnd = () => {
     if (Notification.permission === 'granted') {
-      new Notification(`🕌 ${prayerNamesBN[currentPrayer]} নামাজ`, {
-        body: `এখন ${prayerNamesBN[currentPrayer]} নামাজের সময়।`,
+      new Notification(`🕌 ${prayerNamesBN[nextPrayer]} নামাজ`, {
+        body: `এখন ${prayerNamesBN[nextPrayer]} নামাজের সময়।`,
       });
     }
   };

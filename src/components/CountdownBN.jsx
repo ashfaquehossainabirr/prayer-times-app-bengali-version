@@ -10,6 +10,7 @@ const prayerNamesBN = {
 
 const CountdownBN = ({ nextPrayer, prayerTimes, onCountdownEnd }) => {
   const [timeLeft, setTimeLeft] = useState('');
+  const [notified, setNotified] = useState(false);
 
   const toBengaliDigits = (numberString) => {
     const bnNums = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
@@ -26,6 +27,12 @@ const CountdownBN = ({ nextPrayer, prayerTimes, onCountdownEnd }) => {
       const diff = nextTime - now;
 
       if (diff <= 0) {
+        if (!notified) {
+          alert(`🕌 ${prayerNamesBN[nextPrayer]} নামাজের সময় হয়েছে!`);
+          // You can also call sendPrayerNotification(currentPrayer);
+          setNotified(true);
+        }
+
         onCountdownEnd(nextPrayer);
         clearInterval(interval);
         return;
